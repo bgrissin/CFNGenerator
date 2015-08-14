@@ -5,10 +5,10 @@ import json
 from datetime import datetime
 
 ################ Settings ############################
-description= "Descrption" # Used when generating instance names
+description= "Description" # Used when generating instance names
 owner = "Owner" 
 image_id = "ami-17471c27" # AMI ID . Default Ubuntu 14.04 Trusty 
-instance_type = "m3.large" # Slect from your available instance types
+instance_type = "m3.large" # Select from your available instance types
 security_groups_ids = ["sg-xxxxxxxx",] #  A list of all security groups that these instance should belong to.
 subnet_id = "subnet-xxxxxx" 
 key_names = ["user-01","user-02","user-03","user-04"] # List of all the key names that you need to generate instances for. Keys need to be created manually. 
@@ -24,7 +24,7 @@ if __name__== "__main__":
   template['Description']=description
   for index,key_name in enumerate(key_names):
     for num in range(0,num_per_key):
-      instance_name = description + str(index) + str(num)
+      instance_name = description + str(index) + str(num) # Instance name definition
       template["Resources"][instance_name]={}
       template["Resources"][instance_name]["Type"]="AWS::EC2::Instance"
       template["Resources"][instance_name]["Properties"]={}
