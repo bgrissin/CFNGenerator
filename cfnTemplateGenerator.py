@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 ################ Settings ############################
-description= "Description" # Used when generating instance names
+description= "Description" # Alphanumeric ONLY. Used when generating instance names
 owner = "Owner" 
 image_id = "ami-17471c27" # AMI ID . Default Ubuntu 14.04 Trusty 
 instance_type = "m3.large" # Select from your available instance types
